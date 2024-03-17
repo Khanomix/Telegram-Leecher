@@ -10,7 +10,7 @@ opencv-python
 Pillow
 psutil
 pytz
-pip install https://github.com/TelegramPlayGround/pyrogram/archive/unknown_errors.zip
+pyrogram==2.0.106
 requests
 tgcrypto
 uvloop
