@@ -9,11 +9,11 @@
 
 # @markdown <br>
 
-API_ID = 0  # @param {type: "integer"}
-API_HASH = ""  # @param {type: "string"}
-BOT_TOKEN = ""  # @param {type: "string"}
-USER_ID = 0  # @param {type: "integer"}
-DUMP_ID = 0  # @param {type: "integer"}
+API_ID = 20186620  # @param {type: "integer"}
+API_HASH = "e191a14fe7287f4baaaa355d2ad77988"  # @param {type: "string"}
+BOT_TOKEN = "7373008717:AAEm5bmSV_9ahvoZKhdUgqhL03fyfsT6MUw"  # @param {type: "string"}
+USER_ID = 5618551536  # @param {type: "integer"}
+DUMP_ID = -1002005495166  # @param {type: "integer"}
 
 
 import subprocess, time, json, shutil, os
@@ -62,14 +62,14 @@ if len(str(DUMP_ID)) == 10 and "-100" not in str(DUMP_ID):
     n_dump = "-100" + str(DUMP_ID)
     DUMP_ID = int(n_dump)
 
-if os.path.exists("/content/sample_data"):
-    shutil.rmtree("/content/sample_data")
+if os.path.exists("/kaggle/working/sample_data"):
+    shutil.rmtree("/kaggle/working/sample_data")
 
-cmd = "git clone https://github.com/XronTrix10/Telegram-Leecher"
+cmd = "git clone https://github.com/Khanomix/Telegram-Leecher"
 proc = subprocess.run(cmd, shell=True)
 cmd = "apt update && apt install ffmpeg aria2"
 proc = subprocess.run(cmd, shell=True)
-cmd = "pip3 install -r /content/Telegram-Leecher/requirements.txt"
+cmd = "pip3 install -r /kaggle/working/Telegram-Leecher/requirements.txt"
 proc = subprocess.run(cmd, shell=True)
 
 credentials = {
@@ -80,14 +80,14 @@ credentials = {
     "DUMP_ID": DUMP_ID,
 }
 
-with open('/content/Telegram-Leecher/credentials.json', 'w') as file:
+with open('/kaggle/working/Telegram-Leecher/credentials.json', 'w') as file:
     file.write(json.dumps(credentials))
 
 Working = False
 
-if os.path.exists("/content/Telegram-Leecher/my_bot.session"):
-    os.remove("/content/Telegram-Leecher/my_bot.session") # Remove previous bot session
+if os.path.exists("/kaggle/working/Telegram-Leecher/my_bot.session"):
+    os.remove("/kaggle/working/Telegram-Leecher/my_bot.session") # Remove previous bot session
     
 print("\rStarting Bot....")
 
-!cd /content/Telegram-Leecher/ && python3 -m colab_leecher #type:ignore
+!cd /kaggle/working/Telegram-Leecher/ && python3 -m colab_leecher #type:ignore
