@@ -26,7 +26,7 @@ from colab_leecher.utility.variables import (
 
 def isLink(_, __, update):
     if update.text:
-        if "/content/" in str(update.text) or "/home" in str(update.text):
+        if "/kaggle/working/" in str(update.text) or "/home" in str(update.text):
             return True
         elif update.text.startswith("magnet:?xt=urn:btih:"):
             return True
