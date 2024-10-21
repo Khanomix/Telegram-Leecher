@@ -69,7 +69,7 @@ class BotTimes:
 
 
 class Paths:
-    WORK_PATH = "/kaggle/working/Telegram-Leecher/BOT_WORK"
+    WORK_PATH = "/kaggle/tmp/Telegram-Leecher/BOT_WORK"
     THMB_PATH = "/kaggle/working/Telegram-Leecher/colab_leecher/Thumbnail.jpg"
     VIDEO_FRAME = f"{WORK_PATH}/video_frame.jpg"
     HERO_IMAGE = f"{WORK_PATH}/Hero.jpg"
@@ -77,7 +77,7 @@ class Paths:
     MOUNTED_DRIVE = "/kaggle/working/drive"
     down_path = f"{WORK_PATH}/Downloads"
     temp_dirleech_path = f"{WORK_PATH}/dir_leech_temp"
-    mirror_dir = "/kaggle/working/drive/MyDrive/Colab Leecher Uploads"
+    mirror_dir = "/kaggle/working/drive"
     temp_zpath = f"{WORK_PATH}/Leeched_Files"
     temp_unzip_path = f"{WORK_PATH}/Unzipped_Files"
     temp_files_dir = f"{WORK_PATH}/leech_temp"
